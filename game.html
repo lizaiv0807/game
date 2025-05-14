@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра - Камінь, Ножиці, Папір</title>
+    <link rel="stylesheet" href="style_game.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Вибір рівня гри</h1>
+        <select id="robotLevel">
+            <option value="easy">Простий</option>
+            <option value="medium">Середній</option>
+            <option value="hard">Складний</option>
+        </select>
+        <input type="number" id="rounds" placeholder="Кількість раундів" min="1" required>
+        <button onclick="startGame()">Запустити гру</button>
+
+        <div id="gameBlock" class="hidden">
+            <h1>Ваш вибір</h1>
+            <select id="playerChoice">
+                <option value="rock">Камінь</option>
+                <option value="scissors">Ножиці</option>
+                <option value="paper">Папір</option>
+            </select>
+            <button onclick="playRound()">Старти</button>
+            <div id="roundResult" class="results hidden"></div>
+        </div>
+
+        <div id="resultsBlock" class="hidden results">
+            <h1>Результати</h1>
+            <p id="resultText"></p>
+            <p id="finalStats"></p>
+            <div id="overallStats" class="hidden"></div>
+        </div>
+    </div>
+    
+</body>
+<script src="/script_game.js" defer></script>
+</html>
